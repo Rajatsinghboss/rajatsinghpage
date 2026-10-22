@@ -458,6 +458,46 @@
       .has-motion .js-reveal, .has-motion .js-reveal.is-visible { opacity: 1; transform: none; transition: none; }
     }
 
+  
+    /* Founder portrait: transparent cutout with a lifted, floating entrance. */
+    .portrait-float {
+      position: absolute; z-index: 3; left: 50%; bottom: -3%;
+      width: min(94%, 470px); aspect-ratio: 700 / 677;
+      transform: translateX(-50%);
+      transform-origin: center bottom;
+      pointer-events: none;
+      filter: drop-shadow(0 24px 26px rgba(58, 83, 122, .20));
+      animation: portraitFloat 6.4s 1s ease-in-out infinite;
+    }
+    .hero-portrait {
+      display: block; width: 100%; height: 100%;
+      object-fit: contain; object-position: center bottom;
+      opacity: 0;
+      animation: portraitPop 1.05s .18s cubic-bezier(.2,.82,.2,1) forwards;
+    }
+    .about-photo {
+      position: absolute; z-index: 2; inset: 6px 0 0;
+      display: block; width: 100%; height: calc(100% - 6px);
+      object-fit: contain; object-position: center bottom;
+      filter: drop-shadow(0 18px 22px rgba(58,83,122,.13));
+    }
+    @keyframes portraitPop {
+      0% { opacity: 0; transform: translate3d(0,34px,0) scale(.82) rotateY(-11deg); }
+      72% { opacity: 1; transform: translate3d(0,-5px,0) scale(1.025) rotateY(1deg); }
+      100% { opacity: 1; transform: translate3d(0,0,0) scale(1) rotateY(0); }
+    }
+    @keyframes portraitFloat {
+      0%,100% { translate: -50% 0; }
+      50% { translate: -50% -8px; }
+    }
+    @media (max-width: 760px) {
+      .portrait-float { width: min(96%, 400px); bottom: -2%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .portrait-float { animation: none !important; }
+      .hero-portrait { animation: none !important; opacity: 1; }
+    }
+
   </style>
 </head>
 <body>
@@ -484,8 +524,8 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap hero-inner">
         <div class="hero-copy">
-          <h1 id="hero-title"><span class="line">Digital presence</span><span class="line">for <span class="accent">brands.</span></span><span class="line">Public narratives</span><span class="line">for leaders.</span></h1>
-          <p>I’m Rajat Singh, founder of Growth Karo. I help brands build visibility and generate leads, and help political leaders shape their digital presence through content, campaign media and PR.</p>
+          <h1 id="hero-title"><span class="line"><span class="accent">Rajat Singh</span></span><span class="line">Founder of</span><span class="line">Growth Karo.</span></h1>
+          <p>I’m Rajat Singh, founder of Growth Karo. I’m the founder of Growth Karo. I help brands grow their digital presence and support political leaders with strategic digital PR, campaign content and public communication.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Work with me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="button button-secondary" href="#work">Explore selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5 5 5-5"/></svg></a>
@@ -495,6 +535,9 @@
         <div class="hero-art" aria-label="Animated 3D orb representing connected digital campaigns">
           <div id="scene" aria-hidden="true"></div>
           <div class="orb-fallback" aria-hidden="true"><span class="orb-ring"></span></div>
+          <div class="portrait-float">
+            <img class="hero-portrait" src="assets/rajat-singh.webp" alt="Rajat Singh, founder of Growth Karo" width="400" height="387" fetchpriority="high" decoding="async">
+          </div>
           <div class="scene-label scene-label--top"><span class="label-dot"></span><strong>Brand growth</strong> / Search · Social · Leads</div>
           <div class="scene-label scene-label--bottom"><strong>Public influence</strong> / Digital PR · Campaigns</div>
         </div>
@@ -646,7 +689,7 @@
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="wrap about-layout">
         <div class="about-visual" aria-label="Rajat Singh profile mark">
-          <div class="monogram" aria-hidden="true">RS</div>
+          <img class="about-photo" src="assets/rajat-singh.webp" alt="Portrait of Rajat Singh" width="400" height="387" loading="lazy" decoding="async">
           <div class="about-stamp"><span>Rajat Singh</span><span>Founder, Growth Karo</span></div>
         </div>
         <div class="about-copy">
