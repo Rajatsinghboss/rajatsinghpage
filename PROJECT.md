@@ -42,16 +42,16 @@ Premium light-theme portfolio with soft white and blue-tinted backgrounds, mint,
 Professional English with a natural Indian-business tone. Make services and next steps specific. Avoid unsupported founder credentials, invented testimonials, or guaranteed performance claims. Case-study figures shown on the source portfolio are marked as website-reported and should be verified before use in paid promotion.
 
 ## Assets
-- Visual design uses inline SVG geometry, a Three.js scene, and the founder portrait asset at `assets/rajat-singh.webp`; no build tooling is required.
+- Visual design uses inline SVG geometry, a Three.js scene, and the original founder portrait at `assets/rajat-singh-photo.webp`; no build tooling is required.
 - Growth Karo case study names and reported metrics are referenced from https://growthkaro.in/portfolio.
-- Founder portrait: `assets/rajat-singh.webp`, created as an optimized transparent cutout from the photo supplied in the conversation. Used in the opening hero and About section with a pop-in entrance and gentle float animation.
+- Founder portrait: `assets/rajat-singh-photo.webp`, an optimized WebP made directly from the original photo supplied in the conversation. The hero and About section use it inside intentional rounded photo frames; this avoids the visible dark halo and hard cutout crop from the earlier silhouette asset.
 - Instagram profile: @rajatsingh_boss2.
 
 ## Functionality
 - Responsive layout for desktop, tablet, and mobile.
 - Working section navigation and mobile menu.
 - Three.js colorful animated 3D hero with pointer interaction and a CSS fallback.
-- Rajat's transparent portrait animates into the hero and also appears in the About section.
+- Rajat's original portrait animates into the rounded hero frame and also appears in the About section.
 - IntersectionObserver scroll reveals, float animations, hover lifts, and pastel ambient background motion.
 - Respects `prefers-reduced-motion`.
 - Audience-specific WhatsApp links, full portfolio link, and Instagram links.
