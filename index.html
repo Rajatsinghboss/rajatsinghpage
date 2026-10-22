@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090d12">
+  <meta name="theme-color" content="#f8fbff">
   <meta name="description" content="Rajat Singh, founder of Growth Karo. Digital growth for brands and digital PR for political leaders.">
   <meta property="og:title" content="Rajat Singh | Growth Karo">
   <meta property="og:description" content="Digital presence for brands. Public narratives for leaders.">
@@ -313,6 +313,151 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
+  
+    /* Color refresh: a bright, premium canvas with playful pastel depth. */
+    :root {
+      color-scheme: light;
+      --bg: #f8fbff; --surface: #ffffff; --surface-2: #f0f7fb;
+      --ink: #172638; --muted: #5c7080; --dim: #748796; --line: #dce7ee;
+      --mint: #baf5df; --mint-ink: #173b32; --coral: #ffbca9;
+      --max: 1220px; --radius: 20px; --ease: cubic-bezier(.2,.78,.2,1);
+    }
+    body {
+      background: radial-gradient(ellipse at 7% 6%, rgba(189,229,255,.42), transparent 29rem),
+        radial-gradient(ellipse at 92% 17%, rgba(255,219,208,.45), transparent 26rem), var(--bg);
+      color: var(--ink);
+    }
+    ::selection { color: #173b32; background: #baf5df; }
+    a:focus-visible, button:focus-visible { outline-color: #6d75e8; }
+    .site-header { background: rgba(249,252,255,.84); border-bottom-color: rgba(208,222,233,.86); box-shadow: 0 7px 28px rgba(39,68,93,.035); }
+    .brand-mark { color: #427cdd; border-color: #bfd0f8; background: linear-gradient(145deg,#f1f5ff,#e9fbf5); }
+    .brand-copy span { color: #697c8c; }
+    .nav-links a:not(.nav-cta) { color: #5d7182; }
+    .nav-links a:not(.nav-cta):hover { color: #212c48; }
+    .nav-cta, .button-primary { background: linear-gradient(120deg,#baf5df,#d8f8eb 60%,#d9e7ff); color: #173b32; box-shadow: 0 8px 24px rgba(81,166,133,.16); }
+    .nav-cta:hover, .button-primary:hover { background: linear-gradient(120deg,#a1edd0,#c5f1ff); box-shadow: 0 12px 30px rgba(92,137,206,.2); }
+    .button-secondary { border-color: #d3e0e9; color: #263b4e; background: rgba(255,255,255,.72); }
+    .button-secondary:hover { border-color: #a7c5d8; background: #fff; }
+    .menu-toggle { border-color: #dce7ee; color: #23374a; background: rgba(255,255,255,.8); }
+    .hero { border-bottom-color: #e2ebf1; }
+    .hero::before {
+      right: -120px; top: -70px;
+      background: radial-gradient(circle at 33% 38%,rgba(180,225,255,.63),transparent 38%),
+        radial-gradient(circle at 63% 61%,rgba(255,201,185,.46),transparent 43%),
+        radial-gradient(circle,rgba(180,246,221,.28),transparent 72%);
+      filter: blur(4px); animation: pastelDrift 13s ease-in-out infinite alternate;
+    }
+    h1 .accent { background: linear-gradient(112deg,#3986d9 0%,#8a67df 48%,#eb8c7b 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero-copy { animation: heroEnter .9s cubic-bezier(.18,.7,.2,1) both; }
+    .hero-art { animation: orbEnter 1.05s .12s cubic-bezier(.18,.7,.2,1) both; }
+    .hero-copy > p { color: #5b6e7c; }
+    .hero-note { color: #627787; }
+    .status-dot { background: #45bd91; box-shadow: 0 0 0 5px rgba(69,189,145,.13); animation: statusPulse 2.6s ease-in-out infinite; }
+    .orb-fallback { border-color: rgba(107,154,229,.45); background: radial-gradient(circle at 34% 25%,rgba(255,255,255,.95),rgba(178,231,255,.58) 26%,rgba(199,185,255,.24) 48%,rgba(255,207,196,.09) 67%); box-shadow: inset 0 0 75px rgba(108,194,170,.14),15px 40px 90px rgba(70,105,143,.14); animation: orbFloat 7s ease-in-out infinite; }
+    .orb-fallback::before { border-color: rgba(105,132,220,.52); }
+    .orb-fallback::after { border-color: rgba(240,143,126,.68); }
+    .orb-ring { border-color: rgba(63,171,145,.55); }
+    .scene-label { background: rgba(255,255,255,.88); border-color: rgba(204,220,232,.9); color: #5b6e7b; box-shadow: 0 16px 36px rgba(47,76,101,.13); backdrop-filter: blur(12px); }
+    .scene-label strong { color: #23374a; }
+    .scene-label--top { animation: labelFloat 5.8s ease-in-out infinite; }
+    .scene-label--bottom { animation: labelFloat 6.5s .7s ease-in-out infinite reverse; }
+    .scroll-hint { color: #8295a4; }
+    .scroll-hint span { background: #b3c6d1; }
+    .client-strip { background: rgba(237,247,250,.92); border-bottom-color: #dce8ee; }
+    .client-strip p { color: #687d8b; }
+    .strip-items span { color: #263c4c; }
+    .strip-items span:nth-child(2), .strip-items span:nth-child(4) { color: #588b83; }
+    .section-heading p { color: #5d7180; }
+    .services { background: linear-gradient(180deg,rgba(239,249,248,.96),rgba(246,250,255,.96)); border-block-color: #dce8ee; }
+    .service-path { background: linear-gradient(145deg,#fff 0%,#f2fbf8 100%); border-color: #d8e7e9; box-shadow: 0 12px 34px rgba(49,83,97,.055); transition: transform .38s var(--ease),box-shadow .38s ease,border-color .38s ease; }
+    .service-path:hover { transform: translateY(-7px); border-color: #b3d9d0; box-shadow: 0 24px 48px rgba(49,83,97,.11); }
+    .service-path--political { background: linear-gradient(145deg,#fff 0%,#fff5f1 100%); border-color: #ebdcd8; }
+    .service-path--political:hover { border-color: #edc1b5; }
+    .service-path::before { border-color: rgba(71,181,145,.28); box-shadow: 0 0 0 32px rgba(71,181,145,.045),0 0 0 64px rgba(71,181,145,.028); animation: ringDrift 9s ease-in-out infinite; }
+    .service-path--political::before { border-color: rgba(237,139,116,.3); box-shadow: 0 0 0 32px rgba(237,139,116,.05),0 0 0 64px rgba(237,139,116,.03); animation-delay: -3s; }
+    .path-icon { color: #369978; border-color: #c4e6dc; background: linear-gradient(145deg,#effcf6,#eff8ff); }
+    .service-path--political .path-icon { color: #d47861; border-color: #efd1c8; background: linear-gradient(145deg,#fff3ee,#fff8f4); }
+    .path-code { color: #7a8d9b; }
+    .service-list li { border-color: #d7e4e9; color: #42596a; background: rgba(255,255,255,.7); }
+    .service-path--political .service-list li { border-color: #ecd6d0; }
+    .text-link { color: #2866b6; }
+    .work-intro-link { color: #3478c7; }
+    .featured-work { background: #fff; border-color: #d6e4eb; box-shadow: 0 18px 44px rgba(51,82,109,.07); }
+    .featured-art { background: linear-gradient(145deg,#dff6f2,#e4edff 56%,#ffe5dc); }
+    .featured-art::before { background: radial-gradient(circle at 52% 46%,rgba(255,255,255,.48),transparent 39%),linear-gradient(128deg,rgba(255,255,255,0),rgba(104,139,212,.08)); }
+    .work-type { color: #328e73; }
+    .featured-copy p, .work-card p { color: #607382; }
+    .result-line { border-top-color: #dce8ee; }
+    .result-line strong { color: #1f3348; }
+    .result-line span { color: #637887; }
+    .work-card { background: linear-gradient(145deg,#fff,#f0f7ff); border-color: #d8e5ee; box-shadow: 0 12px 32px rgba(50,81,110,.045); }
+    .work-card:hover { box-shadow: 0 22px 42px rgba(50,81,110,.13); border-color: #b8d0e1; }
+    .work-card--warm { background: linear-gradient(145deg,#fff,#fff0e9); }
+    .work-card--blue { background: linear-gradient(145deg,#fff,#edf3ff); }
+    .work-card--wide { background: linear-gradient(110deg,#f4fff9,#f2f4ff 72%,#fff5ef); }
+    .work-card .work-type[style*="#ffb69d"] { color: #c96e53 !important; }
+    .work-card .work-type[style*="#9bc6f0"] { color: #4a76b8 !important; }
+    .card-result { color: #1f3348; }
+    .card-result span { color: #637887; }
+    .work-note { color: #748895; }
+    .about { background: linear-gradient(150deg,#f4f7ff,#f3fffb 58%,#fff6f2); border-block-color: #dfe8ee; }
+    .about-visual { background: radial-gradient(circle at 50% 36%,#fff 0,#e8f1ff 38%,#daf6eb 76%,#f5e5ff 100%); border-color: #d3e2ea; box-shadow: 0 18px 46px rgba(49,82,112,.1); }
+    .about-visual::before { border-color: rgba(85,135,206,.38); }
+    .about-visual::after { border-color: rgba(100,190,162,.23); }
+    .monogram { background: linear-gradient(140deg,#e4fff2,#d8e7ff 65%,#fbe3da); color: #355fc4; border-color: #c2d6ec; box-shadow: 14px 23px 44px rgba(62,91,131,.14); }
+    .about-stamp { border-top-color: #cfdee8; color: #607584; }
+    .about-copy > p { color: #5e7382; }
+    .about-points li { color: #344d5e; }
+    .about-points svg, .process-step svg { color: #3caa84; }
+    .process { border-bottom-color: #dce7ee; }
+    .process-flow, .process-step + .process-step { border-color: #d8e4ea; }
+    .process-step h3 { color: #213648; }
+    .process-step p { color: #627785; }
+    .contact::before { background: radial-gradient(ellipse,rgba(159,229,206,.4) 0,rgba(208,222,255,.22) 42%,transparent 70%); }
+    .contact h2 span { background: linear-gradient(110deg,#3886d6,#8a66d9 55%,#db846f); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .contact-copy p { color: #607382; }
+    .contact-details { background: rgba(255,255,255,.83); border-color: #d7e4eb; box-shadow: 0 20px 48px rgba(45,77,105,.08); }
+    .contact-details > p, .contact-option span { color: #637887; }
+    .contact-option { border-top-color: #dce7ee; }
+    .contact-option strong { color: #243b4d; }
+    .contact-option svg { color: #3da982; }
+    .footer { background: #eef5f8; border-top-color: #dbe6ec; }
+    .footer-inner p, .footer-links a { color: #6a7f8d; }
+    .footer-links a:hover { color: #23394b; }
+    .footer-signoff { color: #4d6978; }
+
+    .has-motion .js-reveal { opacity: 0; transform: translate3d(0,24px,0) scale(.99); transition: opacity .75s cubic-bezier(.18,.7,.2,1),transform .75s cubic-bezier(.18,.7,.2,1); will-change: opacity,transform; }
+    .has-motion .js-reveal.is-visible { opacity: 1; transform: translate3d(0,0,0) scale(1); }
+    .has-motion .js-reveal[data-reveal="left"] { transform: translate3d(-24px,0,0) scale(.99); }
+    .has-motion .js-reveal[data-reveal="left"].is-visible, .has-motion .js-reveal[data-reveal="right"].is-visible { transform: translate3d(0,0,0) scale(1); }
+    .has-motion .js-reveal[data-reveal="right"] { transform: translate3d(24px,0,0) scale(.99); }
+    .card-art { animation: artFloat 7s ease-in-out infinite; transform-origin: center; }
+    .work-card:nth-child(2n) .card-art { animation-delay: -2.5s; }
+    .work-card:hover .card-art { animation-duration: 3.5s; }
+    .featured-art .route-art { animation: routeFloat 8s ease-in-out infinite; }
+    .process-step { transition: background .3s ease,transform .3s var(--ease); border-radius: 14px; }
+    .process-step:hover { transform: translateY(-5px); background: rgba(255,255,255,.72); }
+    .contact-details { transition: transform .35s var(--ease),box-shadow .35s ease; }
+    .contact-details:hover { transform: translateY(-4px); box-shadow: 0 25px 55px rgba(45,77,105,.13); }
+    @keyframes heroEnter { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes orbEnter { from { opacity: 0; transform: translateY(18px) scale(.92) rotate(-3deg); } to { opacity: 1; transform: translateY(0) scale(1) rotate(0); } }
+    @keyframes orbFloat { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-13px) rotate(2deg); } }
+    @keyframes labelFloat { 0%,100% { translate: 0 0; } 50% { translate: 0 -9px; } }
+    @keyframes artFloat { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: 0 -9px; rotate: 1deg; } }
+    @keyframes routeFloat { 0%,100% { translate: 0 0; rotate: -6deg; } 50% { translate: 0 -7px; rotate: -3deg; } }
+    @keyframes ringDrift { 0%,100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(-12px,-8px,0) scale(1.04); } }
+    @keyframes statusPulse { 0%,100% { box-shadow: 0 0 0 5px rgba(69,189,145,.13); } 50% { box-shadow: 0 0 0 9px rgba(69,189,145,.04); } }
+    @keyframes pastelDrift { 0% { transform: translate3d(0,0,0) scale(1); } 100% { transform: translate3d(-18px,16px,0) scale(1.06); } }
+    @media (max-width: 760px) {
+      .nav-links { background: rgba(250,253,255,.98); border-bottom-color: #dce7ee; box-shadow: 0 15px 30px rgba(39,68,93,.07); }
+      .nav-links a:not(.nav-cta) { border-bottom-color: #e2ebf1; }
+      .client-strip { background: rgba(237,247,250,.96); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-copy, .hero-art, .orb-fallback, .scene-label--top, .scene-label--bottom, .status-dot, .hero::before, .service-path::before, .card-art, .featured-art .route-art { animation: none !important; }
+      .has-motion .js-reveal, .has-motion .js-reveal.is-visible { opacity: 1; transform: none; transition: none; }
+    }
+
   </style>
 </head>
 <body>
@@ -608,6 +753,29 @@
       }
       var year = document.getElementById("year");
       if (year) year.textContent = String(new Date().getFullYear());
+
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduceMotion && "IntersectionObserver" in window) {
+        var revealTargets = document.querySelectorAll(
+          ".section-heading, .service-path, .featured-work, .work-card, .about-visual, .about-copy, .process-step, .contact-copy, .contact-details, .client-strip-inner"
+        );
+        document.documentElement.classList.add("has-motion");
+        revealTargets.forEach(function (element, index) {
+          element.classList.add("js-reveal");
+          if (element.classList.contains("about-visual")) element.setAttribute("data-reveal", "left");
+          if (element.classList.contains("about-copy")) element.setAttribute("data-reveal", "right");
+          element.style.transitionDelay = (index % 4) * 70 + "ms";
+        });
+        var revealObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+        revealTargets.forEach(function (element) { revealObserver.observe(element); });
+      }
     }());
   </script>
   <script type="module">
@@ -628,11 +796,11 @@
         mount.appendChild(renderer.domElement);
         document.documentElement.classList.add("webgl-ready");
 
-        scene.add(new THREE.AmbientLight(0xcce8d8, 1.05));
-        var mintLight = new THREE.PointLight(0x9fffd2, 23, 20);
+        scene.add(new THREE.AmbientLight(0xffffff, 1.8));
+        var mintLight = new THREE.PointLight(0x8bd8ff, 22, 20);
         mintLight.position.set(3, 2.5, 4);
         scene.add(mintLight);
-        var warmLight = new THREE.PointLight(0xff9e7b, 12, 17);
+        var warmLight = new THREE.PointLight(0xffa3d1, 16, 17);
         warmLight.position.set(-3, -1.5, 2);
         scene.add(warmLight);
 
@@ -640,16 +808,16 @@
         scene.add(root);
         var shellGeo = new THREE.IcosahedronGeometry(1.25, 3);
         var shellMat = new THREE.MeshStandardMaterial({
-          color: 0x9bf7d1, metalness: 0.72, roughness: 0.28,
-          emissive: 0x163f37, emissiveIntensity: 0.52, wireframe: true
+          color: 0x74d9bd, metalness: 0.62, roughness: 0.28,
+          emissive: 0x386bdc, emissiveIntensity: 0.34, wireframe: true
         });
         var shell = new THREE.Mesh(shellGeo, shellMat);
         root.add(shell);
 
         var coreGeo = new THREE.IcosahedronGeometry(0.82, 2);
         var coreMat = new THREE.MeshStandardMaterial({
-          color: 0x1d3835, metalness: 0.8, roughness: 0.35,
-          emissive: 0x0a1718, emissiveIntensity: 0.9, flatShading: true
+          color: 0x9f89ef, metalness: 0.48, roughness: 0.3,
+          emissive: 0x725ee3, emissiveIntensity: 0.38, flatShading: true
         });
         var core = new THREE.Mesh(coreGeo, coreMat);
         root.add(core);
@@ -658,30 +826,30 @@
         root.add(ringGroup);
         var ringOne = new THREE.Mesh(
           new THREE.TorusGeometry(1.8, 0.008, 8, 210),
-          new THREE.MeshStandardMaterial({ color: 0xb9f7d5, metalness: 0.5, roughness: 0.35 })
+          new THREE.MeshStandardMaterial({ color: 0x4ebf9e, metalness: 0.35, roughness: 0.4 })
         );
         ringOne.rotation.set(0.65, 0.15, -0.25);
         ringGroup.add(ringOne);
         var ringTwo = new THREE.Mesh(
           new THREE.TorusGeometry(2.05, 0.006, 8, 210),
-          new THREE.MeshStandardMaterial({ color: 0xffb69d, metalness: 0.45, roughness: 0.4 })
+          new THREE.MeshStandardMaterial({ color: 0xff8f78, metalness: 0.35, roughness: 0.4 })
         );
         ringTwo.rotation.set(1.22, -0.43, 0.4);
         ringGroup.add(ringTwo);
         var ringThree = new THREE.Mesh(
           new THREE.TorusGeometry(1.55, 0.004, 6, 180),
-          new THREE.MeshStandardMaterial({ color: 0x6aafa2, metalness: 0.35, roughness: 0.5 })
+          new THREE.MeshStandardMaterial({ color: 0x6d8fe8, metalness: 0.35, roughness: 0.5 })
         );
         ringThree.rotation.set(0.1, 1.15, 0.6);
         ringGroup.add(ringThree);
 
-        var satelliteMat = new THREE.MeshStandardMaterial({ color: 0xffb69d, metalness: 0.65, roughness: 0.25 });
+        var satelliteMat = new THREE.MeshStandardMaterial({ color: 0xff8f78, metalness: 0.55, roughness: 0.25 });
         var satellite = new THREE.Mesh(new THREE.IcosahedronGeometry(0.085, 1), satelliteMat);
         satellite.position.set(1.78, 0.52, 0.1);
         ringGroup.add(satellite);
         var satelliteTwo = new THREE.Mesh(
           new THREE.IcosahedronGeometry(0.055, 1),
-          new THREE.MeshStandardMaterial({ color: 0xb9f7d5, metalness: 0.65, roughness: 0.22 })
+          new THREE.MeshStandardMaterial({ color: 0x6d8fe8, metalness: 0.55, roughness: 0.22 })
         );
         satelliteTwo.position.set(-1.35, -1.1, 0.25);
         ringGroup.add(satelliteTwo);
@@ -700,7 +868,7 @@
         var particleGeometry = new THREE.BufferGeometry();
         particleGeometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
         var particles = new THREE.Points(particleGeometry, new THREE.PointsMaterial({
-          color: 0x92cdb5, size: 0.014, transparent: true, opacity: 0.56, sizeAttenuation: true
+          color: 0x7b9fea, size: 0.018, transparent: true, opacity: 0.78, sizeAttenuation: true
         }));
         scene.add(particles);
 
