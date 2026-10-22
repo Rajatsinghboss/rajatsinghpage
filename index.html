@@ -699,6 +699,52 @@
       .process-step:first-child { border-top: 0; }
     }
 
+  
+    /* Mobile hero portrait centering: use normal grid flow rather than horizontal transforms. */
+    @media (max-width: 760px) {
+      .hero-art {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        place-items: center;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+        padding-inline: 0;
+        overflow: visible;
+      }
+      .portrait-float {
+        position: relative;
+        inset: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin: 0 auto;
+        width: min(88%, 350px);
+        max-width: calc(100% - 8px);
+        justify-self: center;
+        align-self: center;
+        transform: none;
+        translate: 0 0;
+      }
+      .hero-portrait {
+        object-fit: contain;
+        object-position: center center;
+      }
+    }
+    @media (max-width: 420px) {
+      .hero-art {
+        min-height: 0;
+        padding-block: 12px;
+      }
+      .portrait-float {
+        width: min(88%, 320px);
+        max-width: calc(100% - 8px);
+        margin-inline: auto;
+        border-radius: 20px;
+      }
+    }
+
   </style>
 </head>
 <body>
