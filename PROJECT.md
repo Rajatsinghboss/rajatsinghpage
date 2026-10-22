@@ -25,7 +25,7 @@ Start qualified project conversations with Rajat, with equally visible contact p
 - Primary contact: Growth Karo WhatsApp link, https://wa.me/918076517834
 
 ## Visual Direction
-Premium dark editorial portfolio with a responsive Three.js 3D orb in the hero, subtle depth, thin structural borders, large Space Grotesk headings, DM Sans body copy, mint accents, and selective warm coral details. Keep the experience purposeful rather than turning every section into an animation. Include a CSS fallback if WebGL or the CDN is unavailable.
+Premium light-theme portfolio with soft white and blue-tinted backgrounds, mint, lavender, sky-blue, and coral accents, rounded cards, subtle shadows, and large Space Grotesk headings with DM Sans body copy. The Three.js hero uses a colorful 3D orb and floating particles. Scroll-triggered section reveals, floating artwork, hover lift, and gentle ambient movement add energy without clutter. A CSS fallback remains available if WebGL or the CDN is unavailable.
 
 ## Page Structure
 1. Sticky navigation and direct WhatsApp CTA.
@@ -49,7 +49,8 @@ Professional English with a natural Indian-business tone. Make services and next
 ## Functionality
 - Responsive layout for desktop, tablet, and mobile.
 - Working section navigation and mobile menu.
-- Three.js animated 3D hero with pointer interaction and a fallback.
+- Three.js colorful animated 3D hero with pointer interaction and a CSS fallback.
+- IntersectionObserver scroll reveals, float animations, hover lifts, and pastel ambient background motion.
 - Respects `prefers-reduced-motion`.
 - Audience-specific WhatsApp links, full portfolio link, and Instagram links.
 - Semantic sections, focus-visible states, and inline SVG icons.
@@ -59,7 +60,7 @@ Professional English with a natural Indian-business tone. Make services and next
 - Fake headshots or imagery attributed to Rajat without verification.
 - Unverified personal biography, client claims, performance guarantees, and invented testimonials.
 - Making political PR look tied to a specific political party.
-- Overuse of motion, blur, glowing effects, emoji icons, gradient text, and visual noise.
+- Overuse of motion, blur, glowing effects, emoji icons, gradient text, and visual noise. Animation should be soft, purposeful, and disabled/reduced when `prefers-reduced-motion` is enabled.
 
 ## Current Decisions
 - Audience priority: equal focus on brands/businesses and political leaders.
@@ -69,5 +70,6 @@ Professional English with a natural Indian-business tone. Make services and next
 - Political PR focuses on digital strategy, leader branding, campaign creatives, video, social media, and digital outreach.
 - Portfolio case details source: https://growthkaro.in/portfolio.
 - Instagram handle: @rajatsingh_boss2.
-- Design reference: no supplied reference; choose a custom 3D-led creative direction.
+- Design reference: no supplied reference; custom light-theme 3D-led direction with pastel gradients and scroll-triggered reveals.
+- Latest visual update: convert dark surfaces to a bright palette, animate scroll reveals and floating portfolio artwork, and recolor the Three.js orb. Portrait and real brand/political leader imagery are intentionally not part of this change.
 - Language: professional English with selective Hinglish where it adds warmth.
