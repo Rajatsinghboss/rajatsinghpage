@@ -498,6 +498,61 @@
       .hero-portrait { animation: none !important; opacity: 1; }
     }
 
+  
+    /* Portrait fix: use the original supplied photo inside an intentional, rounded editorial frame.
+       This avoids the previous cutout's dark halo and hard crop around the neck/shoulders. */
+    .portrait-float {
+      position: absolute; z-index: 3; left: 50%; bottom: 0;
+      width: min(88%, 430px); aspect-ratio: 480 / 464;
+      transform: translateX(-50%); transform-origin: center bottom;
+      overflow: hidden; border-radius: 30px;
+      border: 1px solid rgba(255,255,255,.92);
+      background: linear-gradient(145deg,#392a27,#171b27 68%,#4a2e28);
+      box-shadow: 0 24px 70px rgba(54,82,135,.22), 0 0 0 7px rgba(255,255,255,.38);
+      animation: portraitFloat 6.4s 1s ease-in-out infinite;
+      isolation: isolate;
+    }
+    .hero-portrait {
+      display: block; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 38%;
+      opacity: 0; filter: contrast(1.02) saturate(1.02);
+      animation: portraitPop 1.05s .18s cubic-bezier(.2,.82,.2,1) forwards;
+    }
+    .about-photo {
+      position: absolute; z-index: 2; inset: 0;
+      display: block; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 35%;
+      border-radius: inherit; filter: none;
+    }
+    .about-stamp { z-index: 3; }
+    @keyframes portraitPop {
+      0% { opacity: 0; transform: translate3d(0,28px,0) scale(.94); }
+      72% { opacity: 1; transform: translate3d(0,-3px,0) scale(1.01); }
+      100% { opacity: 1; transform: translate3d(0,0,0) scale(1); }
+    }
+    @keyframes portraitFloat {
+      0%,100% { translate: -50% 0; }
+      50% { translate: -50% -8px; }
+    }
+    @media (min-width: 761px) and (max-width: 1100px) {
+      .nav { gap: 10px; }
+      .nav-links { gap: clamp(10px,1.6vw,17px); }
+      .nav-links a:not(.nav-cta) { font-size: 12px; }
+      .nav-cta { padding-inline: 14px; font-size: 12px; }
+      .hero-inner { grid-template-columns: minmax(0,1fr) minmax(0,.9fr); gap: 10px; }
+      .hero-copy, .hero-art { min-width: 0; }
+      h1 { font-size: clamp(2.8rem,5.7vw,4.5rem); }
+      .portrait-float { width: min(90%,410px); }
+    }
+    @media (max-width: 760px) {
+      .portrait-float { width: min(86%,390px); bottom: 0; border-radius: 24px; }
+      .about-photo { object-position: center 32%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .portrait-float { animation: none !important; }
+      .hero-portrait { animation: none !important; opacity: 1; }
+    }
+
   </style>
 </head>
 <body>
@@ -532,11 +587,11 @@
           </div>
           <div class="hero-note"><span class="status-dot"></span><span>Founder-led strategy. Growth Karo execution.</span></div>
         </div>
-        <div class="hero-art" aria-label="Animated 3D orb representing connected digital campaigns">
+        <div class="hero-art" aria-label="Rajat Singh portrait with animated 3D artwork">
           <div id="scene" aria-hidden="true"></div>
           <div class="orb-fallback" aria-hidden="true"><span class="orb-ring"></span></div>
           <div class="portrait-float">
-            <img class="hero-portrait" src="assets/rajat-singh.webp" alt="Rajat Singh, founder of Growth Karo" width="400" height="387" fetchpriority="high" decoding="async">
+            <img class="hero-portrait" src="assets/rajat-singh-photo.webp" alt="Rajat Singh, founder of Growth Karo" width="480" height="464" fetchpriority="high" decoding="async">
           </div>
           <div class="scene-label scene-label--top"><span class="label-dot"></span><strong>Brand growth</strong> / Search · Social · Leads</div>
           <div class="scene-label scene-label--bottom"><strong>Public influence</strong> / Digital PR · Campaigns</div>
@@ -689,7 +744,7 @@
     <section class="section about" id="about" aria-labelledby="about-title">
       <div class="wrap about-layout">
         <div class="about-visual" aria-label="Rajat Singh profile mark">
-          <img class="about-photo" src="assets/rajat-singh.webp" alt="Portrait of Rajat Singh" width="400" height="387" loading="lazy" decoding="async">
+          <img class="about-photo" src="assets/rajat-singh-photo.webp" alt="Portrait of Rajat Singh" width="480" height="464" loading="lazy" decoding="async">
           <div class="about-stamp"><span>Rajat Singh</span><span>Founder, Growth Karo</span></div>
         </div>
         <div class="about-copy">
