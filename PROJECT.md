@@ -53,6 +53,7 @@ Professional English with a natural Indian-business tone. Make services and next
 - Three.js colorful animated 3D hero with pointer interaction and a CSS fallback.
 - Rajat's original portrait animates into the rounded hero frame and also appears in the About section.
 - IntersectionObserver scroll reveals, float animations, hover lifts, and pastel ambient background motion.
+- Full portfolio archive with looping ticker, staggered name-chip entrances, category grouping, and embedded source portfolio imagery.
 - Respects `prefers-reduced-motion`.
 - Audience-specific WhatsApp links, full portfolio link, and Instagram links.
 - Semantic sections, focus-visible states, and inline SVG icons.
@@ -70,7 +71,9 @@ Professional English with a natural Indian-business tone. Make services and next
 - Primary conversion action: start a WhatsApp conversation.
 - Brand services include SEO, social media, video ads, websites, branding, and lead generation.
 - Political PR focuses on digital strategy, leader branding, campaign creatives, video, social media, and digital outreach.
-- Portfolio case details source: https://growthkaro.in/portfolio.
+- Portfolio case details and visible names source: https://growthkaro.in/portfolio.
+- The page's full portfolio is embedded in an iframe so its original project photographs remain owned and served by Growth Karo; a direct link is provided as a fallback if the host blocks embedding.
+- Animated archive name lists currently include 18 political/public campaign names and 23 brand/organisation names visible in the indexed portfolio content.
 - Instagram handle: @rajatsingh_boss2.
 - Design reference: no supplied reference; custom light-theme 3D-led direction with pastel gradients and scroll-triggered reveals.
 - Latest visual update: convert dark surfaces to a bright palette, animate scroll reveals and floating portfolio artwork, and recolor the Three.js orb.
