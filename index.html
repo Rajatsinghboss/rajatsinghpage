@@ -745,6 +745,122 @@
       }
     }
 
+  
+    /* Full Growth Karo archive: animated names, category groups, and source-owned photography. */
+    .portfolio-archive {
+      margin-top: clamp(64px,8vw,108px);
+      padding: clamp(24px,4.5vw,54px);
+      border: 1px solid #d9e7ef;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 0% 0%,rgba(184,232,255,.36),transparent 28rem),
+        radial-gradient(circle at 100% 15%,rgba(255,218,208,.35),transparent 28rem),
+        linear-gradient(150deg,#ffffff,#f6fbff 65%,#f5fffb);
+      box-shadow: 0 22px 70px rgba(49,83,112,.075);
+      overflow: hidden;
+    }
+    .archive-heading {
+      display:flex; align-items:flex-end; justify-content:space-between; gap:28px;
+      margin-bottom:30px;
+    }
+    .archive-heading-copy { min-width:0; max-width:720px; }
+    .archive-kicker {
+      display:inline-flex; align-items:center; gap:9px; color:#5b7890;
+      font-size:10px; font-weight:700; letter-spacing:.15em; text-transform:uppercase;
+    }
+    .archive-live-dot { width:7px;height:7px;border-radius:50%;background:#4ab98f;box-shadow:0 0 0 4px rgba(74,185,143,.12); }
+    .archive-heading h3 {
+      margin:18px 0 14px; color:#192b3b;
+      font-size:clamp(2.4rem,5.5vw,4.5rem); line-height:.98; letter-spacing:-.06em; font-weight:600;
+    }
+    .archive-heading h3 span { color:transparent;background:linear-gradient(110deg,#4388d9,#8b68db 55%,#df8d79);background-clip:text;-webkit-background-clip:text; }
+    .archive-heading-copy p,.portfolio-source-top p { max-width:620px; margin:0; color:#617686; font-size:14px; line-height:1.75; }
+    .archive-open-link { flex:0 0 auto; }
+    .archive-marquee {
+      position:relative; width:calc(100% + 2 * clamp(24px,4.5vw,54px));
+      margin:0 calc(-1 * clamp(24px,4.5vw,54px)) 34px; padding:14px 0;
+      overflow:hidden; border-block:1px solid rgba(204,222,234,.9);
+      background:rgba(255,255,255,.64);
+      mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+    }
+    .archive-marquee-track { display:flex; width:max-content; animation:archiveTicker 70s linear infinite; }
+    .archive-marquee:hover .archive-marquee-track { animation-play-state:paused; }
+    .archive-marquee-set { display:flex; align-items:center; gap:20px; padding-right:20px; white-space:nowrap; color:#4d6274; font:600 12px/1.3 "Space Grotesk",sans-serif; }
+    .archive-marquee-set span { color:#7a9fd2; font-size:11px; }
+    .archive-name-groups { display:grid; grid-template-columns:1fr; gap:26px; }
+    .archive-name-group { padding:22px; border:1px solid #dce7ee; border-radius:22px; background:rgba(255,255,255,.74); }
+    .archive-political-group { background:linear-gradient(135deg,rgba(255,255,255,.91),rgba(239,248,255,.9)); }
+    .archive-brand-group { background:linear-gradient(135deg,rgba(255,255,255,.91),rgba(241,255,248,.86)); }
+    .archive-group-heading { display:flex; align-items:center; gap:14px; margin-bottom:22px; }
+    .archive-group-index { display:grid; place-items:center; width:42px;height:42px; flex:0 0 42px; border-radius:14px; background:#e9f2ff; color:#4c79c9; font:600 13px/1 "Space Grotesk",sans-serif; }
+    .archive-brand-group .archive-group-index { background:#e4f7ef;color:#329b7a; }
+    .archive-group-heading > div { flex:1; min-width:0; }
+    .archive-group-heading h4 { margin:0 0 4px; color:#203649; font:600 clamp(1rem,2.2vw,1.3rem)/1.2 "Space Grotesk",sans-serif; letter-spacing:-.035em; }
+    .archive-group-heading p { margin:0; color:#738696; font-size:11px; line-height:1.5; }
+    .archive-group-count { color:#8b9ba8; font-size:10px; white-space:nowrap; }
+    .archive-name-grid { display:flex; flex-wrap:wrap; gap:9px; }
+    .archive-client-name {
+      display:inline-flex; align-items:center; min-height:38px; max-width:100%;
+      padding:9px 13px; border:1px solid #dae6ed; border-radius:999px;
+      background:rgba(255,255,255,.85); color:#304b5e;
+      font:500 12px/1.25 "DM Sans",sans-serif; overflow-wrap:anywhere;
+      box-shadow:0 3px 10px rgba(50,80,103,.025);
+      opacity:0; transform:translateY(12px) scale(.97);
+      animation:archiveChipIn .6s cubic-bezier(.2,.78,.2,1) forwards;
+      animation-delay:calc(var(--chip-index,0) * 45ms);
+      transition:transform .22s ease,border-color .22s ease,background .22s ease,box-shadow .22s ease;
+    }
+    .archive-client-name:nth-child(4n+1) { border-color:#d4e3fa;background:#f6f9ff; }
+    .archive-client-name:nth-child(4n+2) { border-color:#d1eee2;background:#f5fffa; }
+    .archive-client-name:nth-child(4n+3) { border-color:#f1ded8;background:#fff8f5; }
+    .archive-client-name:nth-child(4n+4) { border-color:#e3dbf7;background:#fbf8ff; }
+    .archive-client-name:hover { transform:translateY(-4px) scale(1.035); border-color:#a9c5dc; box-shadow:0 9px 18px rgba(50,80,103,.1); background:#fff; }
+    .portfolio-source-panel { margin-top:30px; overflow:hidden; border:1px solid #d7e5ed; border-radius:22px; background:#fff; }
+    .portfolio-source-top { display:flex; align-items:flex-end; justify-content:space-between; gap:22px; padding:24px 26px; }
+    .portfolio-source-top h4 { margin:9px 0 8px; color:#233a4e; font:600 clamp(1.1rem,2.5vw,1.6rem)/1.2 "Space Grotesk",sans-serif; letter-spacing:-.035em; }
+    .portfolio-source-top p { font-size:12px; }
+    .source-text-link { display:inline-flex; align-items:center; gap:8px; flex:0 0 auto; color:#3175c4; font-size:12px; font-weight:700; }
+    .source-text-link svg { width:15px;height:15px; }
+    .portfolio-frame-wrap { position:relative; background:#f6f9fc; border-top:1px solid #dce7ee; }
+    .portfolio-source-frame {
+      display:block; width:100%; height:1900px; border:0; background:#fff;
+    }
+    .portfolio-frame-fallback { padding:12px 18px; border-top:1px solid #e4edf2; color:#728697; font-size:11px; text-align:center; }
+    .portfolio-frame-fallback a { color:#3175c4; font-weight:700; text-decoration:underline; text-underline-offset:3px; }
+    @keyframes archiveTicker { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+    @keyframes archiveChipIn { to { opacity:1; transform:translateY(0) scale(1); } }
+    .has-motion .archive-intro, .has-motion .archive-name-group, .has-motion .portfolio-source-panel { opacity:0; transform:translateY(18px); transition:opacity .7s ease,transform .7s cubic-bezier(.2,.78,.2,1); }
+    .has-motion .archive-intro.is-visible, .has-motion .archive-name-group.is-visible, .has-motion .portfolio-source-panel.is-visible { opacity:1; transform:translateY(0); }
+    @media(max-width:760px) {
+      .portfolio-archive { margin-top:55px; padding:20px 14px 14px; border-radius:24px; }
+      .archive-heading { align-items:flex-start; flex-direction:column; gap:18px; margin-bottom:24px; }
+      .archive-heading h3 { margin-top:15px; font-size:clamp(2.6rem,11vw,3.8rem); }
+      .archive-heading-copy p { font-size:13px; }
+      .archive-open-link { width:100%; }
+      .archive-marquee { width:calc(100% + 28px); margin:0 -14px 22px; }
+      .archive-name-groups { gap:15px; }
+      .archive-name-group { padding:15px; border-radius:17px; }
+      .archive-group-heading { align-items:flex-start; gap:10px; margin-bottom:16px; }
+      .archive-group-index { width:34px;height:34px;flex-basis:34px;border-radius:11px; }
+      .archive-group-heading p { font-size:10px; }
+      .archive-group-count { display:none; }
+      .archive-name-grid { gap:7px; }
+      .archive-client-name { min-height:34px; padding:8px 10px; font-size:11px; }
+      .portfolio-source-top { align-items:flex-start; flex-direction:column; padding:19px 16px; gap:14px; }
+      .portfolio-source-frame { height:1600px; }
+    }
+    @media(max-width:420px) {
+      .portfolio-archive { margin-top:42px; padding:17px 10px 10px; }
+      .archive-name-group { padding:13px; }
+      .archive-client-name { font-size:10px; padding:7px 9px; }
+      .portfolio-source-frame { height:1450px; }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .archive-marquee-track,.archive-client-name { animation:none!important; }
+      .archive-client-name { opacity:1; transform:none; }
+      .has-motion .archive-intro,.has-motion .archive-name-group,.has-motion .portfolio-source-panel { opacity:1; transform:none; transition:none; }
+    }
+
   </style>
 </head>
 <body>
@@ -930,6 +1046,90 @@
           </article>
         </div>
         <p class="work-note">*Portfolio metrics shown as reported on the Growth Karo website. Scope, dates and methodology should be confirmed before using these figures in paid promotion.</p>
+
+        <section class="portfolio-archive" id="full-portfolio" aria-labelledby="full-portfolio-title">
+          <div class="archive-heading archive-intro">
+            <div class="archive-heading-copy">
+              <span class="archive-kicker"><span class="archive-live-dot"></span> Growth Karo · Client archive</span>
+              <h3 id="full-portfolio-title">More names.<br><span>More stories.</span></h3>
+              <p>Explore the wider portfolio across political campaigns, consumer brands, retail, hospitality, aviation and education. Names below are taken from the Growth Karo portfolio archive.</p>
+            </div>
+            <a class="button button-primary archive-open-link" href="https://growthkaro.in/portfolio" target="_blank" rel="noopener noreferrer">Open full portfolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          </div>
+
+          <div class="archive-marquee" aria-label="Scrolling list of selected portfolio names">
+            <div class="archive-marquee-track">
+              <div class="archive-marquee-set">Tejashwi Yadav<span aria-hidden="true">✳</span>Jan Vishwas Yatra (RJD)<span aria-hidden="true">✳</span>Rajesh Ranjan (Pappu Yadav)<span aria-hidden="true">✳</span>Pawan Singh<span aria-hidden="true">✳</span>Khesari Lal Yadav<span aria-hidden="true">✳</span>Sambhavi Choudhary<span aria-hidden="true">✳</span>Misa Bharti<span aria-hidden="true">✳</span>Voter Adhikar Yatra (Congress)<span aria-hidden="true">✳</span>Tej Pratap Yadav<span aria-hidden="true">✳</span>Rohini Acharya<span aria-hidden="true">✳</span>Sudhakar Singh<span aria-hidden="true">✳</span>Rajesh Verma<span aria-hidden="true">✳</span>Dilip Jaiswal<span aria-hidden="true">✳</span>Ram Kripal Yadav<span aria-hidden="true">✳</span>Alok Mehta<span aria-hidden="true">✳</span>Neeraj Kumar<span aria-hidden="true">✳</span>Sanjeev Chaurasia<span aria-hidden="true">✳</span>Siddharth Saurav<span aria-hidden="true">✳</span>Zepto<span aria-hidden="true">✳</span>Blinkit<span aria-hidden="true">✳</span>MakeMyTrip<span aria-hidden="true">✳</span>Akasa Air<span aria-hidden="true">✳</span>Domino’s Pizza<span aria-hidden="true">✳</span>KFC India<span aria-hidden="true">✳</span>City Centre Mall<span aria-hidden="true">✳</span>Croma<span aria-hidden="true">✳</span>Lacoste<span aria-hidden="true">✳</span>FirstCry<span aria-hidden="true">✳</span>Sudha Milk<span aria-hidden="true">✳</span>The Taj Studio<span aria-hidden="true">✳</span>La Cabana Goa<span aria-hidden="true">✳</span>Mentors Eduserv<span aria-hidden="true">✳</span>GD Goenka<span aria-hidden="true">✳</span>Aditya Vision<span aria-hidden="true">✳</span>iDestiny<span aria-hidden="true">✳</span>Apple Reseller<span aria-hidden="true">✳</span>Biryani Blues<span aria-hidden="true">✳</span>Pind Balluchi<span aria-hidden="true">✳</span>Sita Ram Diwan Chand<span aria-hidden="true">✳</span>Looks Salon<span aria-hidden="true">✳</span>ISKCON Patna</div>
+              <div class="archive-marquee-set" aria-hidden="true">Tejashwi Yadav<span aria-hidden="true">✳</span>Jan Vishwas Yatra (RJD)<span aria-hidden="true">✳</span>Rajesh Ranjan (Pappu Yadav)<span aria-hidden="true">✳</span>Pawan Singh<span aria-hidden="true">✳</span>Khesari Lal Yadav<span aria-hidden="true">✳</span>Sambhavi Choudhary<span aria-hidden="true">✳</span>Misa Bharti<span aria-hidden="true">✳</span>Voter Adhikar Yatra (Congress)<span aria-hidden="true">✳</span>Tej Pratap Yadav<span aria-hidden="true">✳</span>Rohini Acharya<span aria-hidden="true">✳</span>Sudhakar Singh<span aria-hidden="true">✳</span>Rajesh Verma<span aria-hidden="true">✳</span>Dilip Jaiswal<span aria-hidden="true">✳</span>Ram Kripal Yadav<span aria-hidden="true">✳</span>Alok Mehta<span aria-hidden="true">✳</span>Neeraj Kumar<span aria-hidden="true">✳</span>Sanjeev Chaurasia<span aria-hidden="true">✳</span>Siddharth Saurav<span aria-hidden="true">✳</span>Zepto<span aria-hidden="true">✳</span>Blinkit<span aria-hidden="true">✳</span>MakeMyTrip<span aria-hidden="true">✳</span>Akasa Air<span aria-hidden="true">✳</span>Domino’s Pizza<span aria-hidden="true">✳</span>KFC India<span aria-hidden="true">✳</span>City Centre Mall<span aria-hidden="true">✳</span>Croma<span aria-hidden="true">✳</span>Lacoste<span aria-hidden="true">✳</span>FirstCry<span aria-hidden="true">✳</span>Sudha Milk<span aria-hidden="true">✳</span>The Taj Studio<span aria-hidden="true">✳</span>La Cabana Goa<span aria-hidden="true">✳</span>Mentors Eduserv<span aria-hidden="true">✳</span>GD Goenka<span aria-hidden="true">✳</span>Aditya Vision<span aria-hidden="true">✳</span>iDestiny<span aria-hidden="true">✳</span>Apple Reseller<span aria-hidden="true">✳</span>Biryani Blues<span aria-hidden="true">✳</span>Pind Balluchi<span aria-hidden="true">✳</span>Sita Ram Diwan Chand<span aria-hidden="true">✳</span>Looks Salon<span aria-hidden="true">✳</span>ISKCON Patna</div>
+            </div>
+          </div>
+
+          <div class="archive-name-groups">
+            <div class="archive-name-group archive-political-group">
+              <div class="archive-group-heading"><span class="archive-group-index">01</span><div><h4>Political leaders &amp; yatras</h4><p>Campaign communications, public narratives and digital outreach</p></div><span class="archive-group-count">18 names</span></div>
+              <div class="archive-name-grid">
+                <span class="archive-client-name" style="--chip-index:0">Tejashwi Yadav</span>
+              <span class="archive-client-name" style="--chip-index:1">Jan Vishwas Yatra (RJD)</span>
+              <span class="archive-client-name" style="--chip-index:2">Rajesh Ranjan (Pappu Yadav)</span>
+              <span class="archive-client-name" style="--chip-index:3">Pawan Singh</span>
+              <span class="archive-client-name" style="--chip-index:4">Khesari Lal Yadav</span>
+              <span class="archive-client-name" style="--chip-index:5">Sambhavi Choudhary</span>
+              <span class="archive-client-name" style="--chip-index:6">Misa Bharti</span>
+              <span class="archive-client-name" style="--chip-index:7">Voter Adhikar Yatra (Congress)</span>
+              <span class="archive-client-name" style="--chip-index:0">Tej Pratap Yadav</span>
+              <span class="archive-client-name" style="--chip-index:1">Rohini Acharya</span>
+              <span class="archive-client-name" style="--chip-index:2">Sudhakar Singh</span>
+              <span class="archive-client-name" style="--chip-index:3">Rajesh Verma</span>
+              <span class="archive-client-name" style="--chip-index:4">Dilip Jaiswal</span>
+              <span class="archive-client-name" style="--chip-index:5">Ram Kripal Yadav</span>
+              <span class="archive-client-name" style="--chip-index:6">Alok Mehta</span>
+              <span class="archive-client-name" style="--chip-index:7">Neeraj Kumar</span>
+              <span class="archive-client-name" style="--chip-index:0">Sanjeev Chaurasia</span>
+              <span class="archive-client-name" style="--chip-index:1">Siddharth Saurav</span>
+              </div>
+            </div>
+            <div class="archive-name-group archive-brand-group">
+              <div class="archive-group-heading"><span class="archive-group-index">02</span><div><h4>Brands &amp; organisations</h4><p>Food, retail, hospitality, mobility and institutions</p></div><span class="archive-group-count">23 names</span></div>
+              <div class="archive-name-grid">
+                <span class="archive-client-name" style="--chip-index:0">Zepto</span>
+              <span class="archive-client-name" style="--chip-index:1">Blinkit</span>
+              <span class="archive-client-name" style="--chip-index:2">MakeMyTrip</span>
+              <span class="archive-client-name" style="--chip-index:3">Akasa Air</span>
+              <span class="archive-client-name" style="--chip-index:4">Domino’s Pizza</span>
+              <span class="archive-client-name" style="--chip-index:5">KFC India</span>
+              <span class="archive-client-name" style="--chip-index:6">City Centre Mall</span>
+              <span class="archive-client-name" style="--chip-index:7">Croma</span>
+              <span class="archive-client-name" style="--chip-index:0">Lacoste</span>
+              <span class="archive-client-name" style="--chip-index:1">FirstCry</span>
+              <span class="archive-client-name" style="--chip-index:2">Sudha Milk</span>
+              <span class="archive-client-name" style="--chip-index:3">The Taj Studio</span>
+              <span class="archive-client-name" style="--chip-index:4">La Cabana Goa</span>
+              <span class="archive-client-name" style="--chip-index:5">Mentors Eduserv</span>
+              <span class="archive-client-name" style="--chip-index:6">GD Goenka</span>
+              <span class="archive-client-name" style="--chip-index:7">Aditya Vision</span>
+              <span class="archive-client-name" style="--chip-index:0">iDestiny</span>
+              <span class="archive-client-name" style="--chip-index:1">Apple Reseller</span>
+              <span class="archive-client-name" style="--chip-index:2">Biryani Blues</span>
+              <span class="archive-client-name" style="--chip-index:3">Pind Balluchi</span>
+              <span class="archive-client-name" style="--chip-index:4">Sita Ram Diwan Chand</span>
+              <span class="archive-client-name" style="--chip-index:5">Looks Salon</span>
+              <span class="archive-client-name" style="--chip-index:6">ISKCON Patna</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-source-panel">
+            <div class="portfolio-source-top">
+              <div><span class="archive-kicker">Original visuals &amp; full project archive</span><h4>See the portfolio as published on Growth Karo</h4><p>The embedded archive below loads the original portfolio page, including its project photography and category navigation.</p></div>
+              <a class="source-text-link" href="https://growthkaro.in/portfolio" target="_blank" rel="noopener noreferrer">Open in new tab <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+            </div>
+            <div class="portfolio-frame-wrap">
+              <iframe class="portfolio-source-frame" title="Growth Karo official portfolio archive and project photos" src="https://growthkaro.in/portfolio" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="clipboard-read; clipboard-write"></iframe>
+              <div class="portfolio-frame-fallback">If the archive does not appear inside this frame, <a href="https://growthkaro.in/portfolio" target="_blank" rel="noopener noreferrer">open the original Growth Karo portfolio here</a>.</div>
+            </div>
+          </div>
+        </section>
+
       </div>
     </section>
 
@@ -1047,7 +1247,7 @@
       var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       if (!reduceMotion && "IntersectionObserver" in window) {
         var revealTargets = document.querySelectorAll(
-          ".section-heading, .service-path, .featured-work, .work-card, .about-visual, .about-copy, .process-step, .contact-copy, .contact-details, .client-strip-inner"
+          ".section-heading, .service-path, .featured-work, .work-card, .about-visual, .about-copy, .process-step, .contact-copy, .contact-details, .client-strip-inner, .archive-intro, .archive-name-group, .portfolio-source-panel"
         );
         document.documentElement.classList.add("has-motion");
         revealTargets.forEach(function (element, index) {
