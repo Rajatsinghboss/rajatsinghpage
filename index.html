@@ -487,8 +487,8 @@
       100% { opacity: 1; transform: translate3d(0,0,0) scale(1) rotateY(0); }
     }
     @keyframes portraitFloat {
-      0%,100% { translate: -50% 0; }
-      50% { translate: -50% -8px; }
+      0%,100% { translate: 0 0; }
+      50% { translate: 0 -8px; }
     }
     @media (max-width: 760px) {
       .portrait-float { width: min(96%, 400px); bottom: -2%; }
@@ -553,6 +553,152 @@
       .hero-portrait { animation: none !important; opacity: 1; }
     }
 
+  
+    /* Final mobile-first layout fixes. Keep all content inside the viewport. */
+    *, *::before, *::after { min-width: 0; }
+    html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+    img, canvas, svg { max-width: 100%; }
+    .wrap { width: min(calc(100% - 40px), var(--max)); }
+    .hero-inner, .section-heading, .about-layout, .contact-grid,
+    .featured-work, .service-paths, .work-grid, .process-flow,
+    .client-strip-inner, .footer-inner { min-width: 0; }
+    .hero-copy, .hero-art, .about-copy, .featured-copy, .work-card-copy,
+    .contact-copy, .contact-details { min-width: 0; max-width: 100%; }
+    .hero-art { overflow: visible; }
+    .portrait-float { left: 50%; transform: translateX(-50%); }
+    /* The image is centered by transform; the float animation now only moves vertically. */
+    @media (max-width: 980px) {
+      .nav { gap: 14px; }
+      .nav-links { gap: clamp(12px, 2vw, 20px); }
+      .nav-links a:not(.nav-cta) { font-size: 12px; }
+      .nav-cta { padding-inline: 14px; }
+      .hero-inner { grid-template-columns: minmax(0,1fr) minmax(0,.9fr); gap: 14px; }
+      .hero-copy { max-width: none; }
+      h1 { overflow-wrap: anywhere; font-size: clamp(3rem,6vw,4.8rem); }
+      .hero-art { min-height: 420px; }
+      .portrait-float { width: min(88%, 390px); }
+      .about-layout { grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); gap: 32px; }
+      .about-visual { min-height: 370px; }
+      .about-points { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .contact-grid { grid-template-columns: minmax(0,1fr) minmax(280px,.75fr); gap: 28px; }
+      .work-card, .work-card--wide { min-width: 0; }
+    }
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 78px; }
+      .wrap { width: min(calc(100% - 32px), var(--max)); }
+      .site-header { position: sticky; top: 0; }
+      .nav { height: 70px; gap: 12px; }
+      .brand { gap: 9px; min-width: 0; }
+      .brand-mark { width: 38px; height: 38px; flex: 0 0 38px; }
+      .brand-copy strong { font-size: 14px; }
+      .brand-copy span { font-size: 9px; letter-spacing: .1em; }
+      .menu-toggle { flex: 0 0 44px; }
+      .nav-links { top: 70px; max-height: calc(100dvh - 70px); overflow-y: auto; }
+      .hero { min-height: auto; overflow: clip; }
+      .hero-inner {
+        grid-template-columns: minmax(0,1fr);
+        align-items: start;
+        gap: 0;
+        min-height: auto;
+        padding-block: 46px 36px;
+      }
+      .hero-copy { padding: 0; }
+      h1 { max-width: 100%; font-size: clamp(2.65rem,10.2vw,4.35rem); line-height: .99; letter-spacing: -.055em; margin-bottom: 20px; overflow-wrap: normal; }
+      .hero-copy > p { max-width: 100%; margin-bottom: 24px; font-size: 15px; line-height: 1.7; }
+      .hero-actions { gap: 10px; }
+      .hero-actions .button { width: 100%; min-height: 50px; }
+      .hero-note { margin-top: 24px; margin-bottom: 0; font-size: 11px; line-height: 1.5; }
+      .hero-art {
+        grid-row: auto;
+        min-height: clamp(370px, 105vw, 430px);
+        margin-top: 20px;
+        margin-bottom: 4px;
+        width: 100%;
+        overflow: visible;
+        isolation: isolate;
+      }
+      #scene { inset: 0; width: 100%; height: 100%; }
+      .orb-fallback { width: min(90%, 350px); max-width: 100%; }
+      .portrait-float {
+        left: 50%;
+        bottom: 0;
+        width: min(88%, 355px);
+        aspect-ratio: 480 / 464;
+        transform: translateX(-50%);
+        border-radius: 23px;
+      }
+      .hero-portrait { width: 100%; height: 100%; object-fit: cover; object-position: center 36%; }
+      .scene-label { max-width: 78%; padding: 9px 11px; font-size: 10px; line-height: 1.35; white-space: normal; }
+      .scene-label--top { top: 2%; right: 0; }
+      .scene-label--bottom { bottom: 2%; left: 0; }
+      .scroll-hint { display: none; }
+      .client-strip-inner { display: block; padding-block: 25px; }
+      .client-strip p { max-width: 100%; margin-bottom: 16px; }
+      .strip-items { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); justify-content: initial; align-items: start; gap: 14px 16px; }
+      .strip-items span { line-height: 1.35; overflow-wrap: anywhere; }
+      .section { padding-block: 72px; }
+      .section-heading { grid-template-columns: minmax(0,1fr); gap: 16px; margin-bottom: 30px; }
+      .section-heading h2 { font-size: clamp(2.2rem,8vw,3.4rem); line-height: 1.04; }
+      .section-heading p { max-width: 100%; font-size: 14px; }
+      .work-intro-link { justify-self: start; white-space: normal; }
+      .service-paths, .work-grid { grid-template-columns: minmax(0,1fr); gap: 14px; }
+      .service-path { min-width: 0; min-height: 0; padding: 24px; }
+      .path-top { align-items: flex-start; margin-bottom: 32px; }
+      .path-code { max-width: 62%; text-align: right; line-height: 1.45; }
+      .service-path h3 { max-width: 100%; font-size: clamp(1.7rem,6.2vw,2.2rem); }
+      .service-path p { font-size: 13px; }
+      .service-list { gap: 7px; }
+      .service-list li { font-size: 10px; }
+      .featured-work { grid-template-columns: minmax(0,1fr); min-height: 0; }
+      .featured-art { order: 0; min-height: 250px; }
+      .featured-copy { order: 1; padding: 25px 22px; }
+      .featured-copy h3 { font-size: clamp(2rem,8vw,2.7rem); }
+      .route-art { min-height: 220px; }
+      .work-grid { margin-top: 14px; }
+      .work-card, .work-card--wide { grid-column: auto; display: flex; flex-direction: column; align-items: stretch; gap: 0; min-height: 290px; padding: 24px; }
+      .work-card-copy, .work-card--wide .work-card-copy { width: auto; max-width: 84%; }
+      .card-art, .work-card--wide .card-art { right: -4%; top: 2%; width: 58%; height: 55%; }
+      .about-layout { grid-template-columns: minmax(0,1fr); gap: 28px; }
+      .about-visual { width: min(100%,420px); min-height: 0; aspect-ratio: 4 / 4.35; margin-inline: auto; }
+      .about-photo { object-fit: cover; object-position: center 34%; }
+      .about-stamp { left: 16px; right: 16px; bottom: 16px; font-size: 9px; }
+      .about-copy h2 { font-size: clamp(2.3rem,8.7vw,3.5rem); line-height: 1.04; }
+      .about-copy > p { max-width: 100%; font-size: 14px; }
+      .about-points { grid-template-columns: minmax(0,1fr); gap: 13px; }
+      .process-flow { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+      .process-step { padding: 22px 12px 24px 0; }
+      .process-step + .process-step { padding-left: 12px; }
+      .process-step h3 { font-size: 1.2rem; }
+      .process-step p { font-size: 11px; }
+      .contact { padding-block: 78px; }
+      .contact-grid { grid-template-columns: minmax(0,1fr); gap: 28px; }
+      .contact h2 { font-size: clamp(2.8rem,10.2vw,4.2rem); line-height: .98; overflow-wrap: anywhere; }
+      .contact-copy p { font-size: 14px; }
+      .contact-details { padding: 22px; }
+      .contact-option { gap: 12px; }
+      .contact-option > span { min-width: 0; }
+      .contact-option strong { font-size: 12px; }
+      .contact-option span span { display: block; overflow-wrap: anywhere; }
+      .footer-inner { padding-block: 24px; display: flex; flex-direction: column; align-items: flex-start; gap: 15px; }
+      .footer-links { flex-wrap: wrap; gap: 12px 18px; }
+      .footer-signoff { line-height: 1.5; }
+    }
+    @media (max-width: 420px) {
+      .wrap { width: min(calc(100% - 28px), var(--max)); }
+      .hero-inner { padding-block: 38px 28px; }
+      h1 { font-size: clamp(2.45rem,10vw,3rem); }
+      .hero-art { min-height: 350px; margin-top: 18px; }
+      .portrait-float { width: min(90%,320px); border-radius: 20px; }
+      .scene-label { max-width: 76%; font-size: 9px; }
+      .service-path { padding: 21px; }
+      .work-card-copy, .work-card--wide .work-card-copy { max-width: 90%; }
+      .card-art, .work-card--wide .card-art { right: -9%; width: 65%; }
+      .about-visual { aspect-ratio: 4 / 4.6; }
+      .process-flow { grid-template-columns: minmax(0,1fr); }
+      .process-step, .process-step + .process-step { padding: 22px 0; border-left: 0; border-top: 1px solid #d8e4ea; }
+      .process-step:first-child { border-top: 0; }
+    }
+
   </style>
 </head>
 <body>
@@ -580,7 +726,7 @@
       <div class="wrap hero-inner">
         <div class="hero-copy">
           <h1 id="hero-title"><span class="line"><span class="accent">Rajat Singh</span></span><span class="line">Founder of</span><span class="line">Growth Karo.</span></h1>
-          <p>I’m Rajat Singh, founder of Growth Karo. I’m the founder of Growth Karo. I help brands grow their digital presence and support political leaders with strategic digital PR, campaign content and public communication.</p>
+          <p>I’m Rajat Singh, founder of Growth Karo. I help brands grow their digital presence and support political leaders with strategic digital PR, campaign content and public communication.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#contact">Work with me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a class="button button-secondary" href="#work">Explore selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5 5 5-5"/></svg></a>
