@@ -10,6 +10,7 @@ Before modifying this project, read `PROJECT.md` and the current `index.html`.
 
 - `index.html` contains the full page, responsive styles, inline SVG artwork, navigation behavior, Three.js-powered colorful 3D hero, founder portrait, scroll-reveal transitions, and floating/hover motion.
 - `assets/rajat-singh-photo.webp` is an optimized version of the original portrait used in the hero and About section.
+- The portfolio section includes animated names from the Growth Karo archive and embeds `https://growthkaro.in/portfolio` to display its original project photos and full interactive archive.
 - `PROJECT.md` records the current product brief, audience, brand decisions, visual direction, sources, and implementation notes.
 
 ## Run locally
@@ -19,7 +20,7 @@ Open `index.html` in a modern browser. The 3D hero imports Three.js from jsDeliv
 ## Contact and content
 
 - Brand and political PR inquiries open WhatsApp using Growth Karo's published contact link.
-- Case names and reported figures are drawn from [Growth Karo's portfolio](https://growthkaro.in/portfolio). The figures are identified in the page as reported site metrics and should be verified before use in paid promotion.
+- Case names and reported figures are drawn from [Growth Karo's portfolio](https://growthkaro.in/portfolio). The full source portfolio is also embedded so its original photos and interactive categories can be viewed; the link remains available if embedding is blocked. Reported figures are identified as source-site metrics and should be verified before use in paid promotion.
 - Portrait: an optimized WebP made from the original photo supplied for this website, stored at `assets/rajat-singh-photo.webp` and shown in rounded, animated frames in the hero and About section.
 - Instagram: [@rajatsingh_boss2](https://www.instagram.com/rajatsingh_boss2/).
 
