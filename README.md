@@ -1,6 +1,6 @@
 # Rajat Singh Portfolio
 
-A responsive personal landing page for Rajat Singh, founder of Growth Karo. The site introduces two audiences: brands seeking digital growth and political leaders seeking digital PR.
+A responsive, light-theme personal landing page for Rajat Singh, founder of Growth Karo. The site introduces two audiences: brands seeking digital growth and political leaders seeking digital PR, with a colorful Three.js hero and scroll-triggered animations.
 
 ## Project rules
 
@@ -8,7 +8,7 @@ Before modifying this project, read `PROJECT.md` and the current `index.html`.
 
 ## Files
 
-- `index.html` contains the full page, responsive styles, inline SVG artwork, navigation behavior, and Three.js-powered 3D hero.
+- `index.html` contains the full page, responsive styles, inline SVG artwork, navigation behavior, Three.js-powered colorful 3D hero, scroll-reveal transitions, and floating/hover motion.
 - `PROJECT.md` records the current product brief, audience, brand decisions, visual direction, sources, and implementation notes.
 
 ## Run locally
