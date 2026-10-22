@@ -48,7 +48,7 @@ Professional English with a natural Indian-business tone. Make services and next
 - Instagram profile: @rajatsingh_boss2.
 
 ## Functionality
-- Responsive layout for desktop, tablet, and mobile.
+- Responsive layout for desktop, tablet, and mobile, with a single-column mobile hero, centered portrait frame, wrapped brand strip, and narrow-screen service/portfolio cards.
 - Working section navigation and mobile menu.
 - Three.js colorful animated 3D hero with pointer interaction and a CSS fallback.
 - Rajat's original portrait animates into the rounded hero frame and also appears in the About section.
@@ -73,5 +73,6 @@ Professional English with a natural Indian-business tone. Make services and next
 - Portfolio case details source: https://growthkaro.in/portfolio.
 - Instagram handle: @rajatsingh_boss2.
 - Design reference: no supplied reference; custom light-theme 3D-led direction with pastel gradients and scroll-triggered reveals.
-- Latest visual update: convert dark surfaces to a bright palette, animate scroll reveals and floating portfolio artwork, and recolor the Three.js orb. Portrait and real brand/political leader imagery are intentionally not part of this change.
+- Latest visual update: convert dark surfaces to a bright palette, animate scroll reveals and floating portfolio artwork, and recolor the Three.js orb.
+- Mobile responsiveness refresh: correct portrait centering animation (float vertically only), give the hero image its own space beneath the copy, keep text and cards within the viewport, and stack the About/contact sections on narrow screens. Remove duplicated founder intro copy.
 - Language: professional English with selective Hinglish where it adds warmth.
