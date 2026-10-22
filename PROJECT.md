@@ -74,5 +74,5 @@ Professional English with a natural Indian-business tone. Make services and next
 - Instagram handle: @rajatsingh_boss2.
 - Design reference: no supplied reference; custom light-theme 3D-led direction with pastel gradients and scroll-triggered reveals.
 - Latest visual update: convert dark surfaces to a bright palette, animate scroll reveals and floating portfolio artwork, and recolor the Three.js orb.
-- Mobile responsiveness refresh: correct portrait centering animation (float vertically only), give the hero image its own space beneath the copy, keep text and cards within the viewport, and stack the About/contact sections on narrow screens. Remove duplicated founder intro copy.
+- Mobile responsiveness refresh: correct portrait centering animation (float vertically only), give the hero image its own space beneath the copy, keep text and cards within the viewport, and stack the About/contact sections on narrow screens. The hero portrait now switches to normal grid flow on mobile and uses centered, contain-fit image positioning to prevent horizontal drift or cropping. Remove duplicated founder intro copy.
 - Language: professional English with selective Hinglish where it adds warmth.
