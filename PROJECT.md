@@ -42,14 +42,16 @@ Premium light-theme portfolio with soft white and blue-tinted backgrounds, mint,
 Professional English with a natural Indian-business tone. Make services and next steps specific. Avoid unsupported founder credentials, invented testimonials, or guaranteed performance claims. Case-study figures shown on the source portfolio are marked as website-reported and should be verified before use in paid promotion.
 
 ## Assets
-- Current visual design uses inline SVG geometry and a Three.js scene; no extra image files or build tooling are required.
+- Visual design uses inline SVG geometry, a Three.js scene, and the founder portrait asset at `assets/rajat-singh.webp`; no build tooling is required.
 - Growth Karo case study names and reported metrics are referenced from https://growthkaro.in/portfolio.
-- Instagram profile: @rajatsingh_boss2. Instagram did not expose a verifiable profile portrait to the build environment, so the About panel uses a designed RS monogram instead of an unverified or unrelated face. Replace this with Rajat's approved photo when an accessible image is available.
+- Founder portrait: `assets/rajat-singh.webp`, created as an optimized transparent cutout from the photo supplied in the conversation. Used in the opening hero and About section with a pop-in entrance and gentle float animation.
+- Instagram profile: @rajatsingh_boss2.
 
 ## Functionality
 - Responsive layout for desktop, tablet, and mobile.
 - Working section navigation and mobile menu.
 - Three.js colorful animated 3D hero with pointer interaction and a CSS fallback.
+- Rajat's transparent portrait animates into the hero and also appears in the About section.
 - IntersectionObserver scroll reveals, float animations, hover lifts, and pastel ambient background motion.
 - Respects `prefers-reduced-motion`.
 - Audience-specific WhatsApp links, full portfolio link, and Instagram links.
